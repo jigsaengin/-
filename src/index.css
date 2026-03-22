@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer utilities {
+  @keyframes draw {
+    from {
+      stroke-dasharray: 400;
+      stroke-dashoffset: 400;
+    }
+    to {
+      stroke-dasharray: 400;
+      stroke-dashoffset: 0;
+    }
+  }
+  .animate-draw {
+    animation: draw 1s ease-out forwards;
+  }
+}
