@@ -217,11 +217,11 @@ export default function App() {
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="p-10 bg-slate-50 rounded-[32px] border border-slate-100 shadow-sm transition-transform hover:scale-[1.02]">
                     <p className="text-slate-400 text-sm mb-4">정보는 누구나 줄 수 있습니다.</p>
-                    <p className="text-2xl font-black text-slate-900">결과는 아무나 만들 수 없습니다.</p>
+                    <p className="text-2xl font-black text-slate-900">결과는 아무나<br />만들 수 없습니다.</p>
                   </div>
                   <div className="p-10 bg-blue-600 rounded-[32px] shadow-xl shadow-blue-600/20 transition-transform hover:scale-[1.02]">
                     <p className="text-blue-200 text-sm mb-4">현직메디는 ‘정보’만 제공하지 않습니다.</p>
-                    <p className="text-2xl font-black text-white">결과를 설계하고, 실제로 만들어냅니다.</p>
+                    <p className="text-2xl font-black text-white">결과를 설계하고,<br />실제로 만들어 냅니다.</p>
                   </div>
                 </div>
 
@@ -257,7 +257,9 @@ export default function App() {
               직접 설계합니다.
             </motion.h1>
             <motion.p variants={fadeIn} className="text-lg md:text-xl text-slate-600 leading-relaxed mb-10 max-w-lg">
-              단순한 정보 제공이 아닙니다. 합격과 취업을 실제로 만들어낸 전문가들이 당신의 결과를 설계합니다.
+              단순한 정보 제공이 아닙니다.<br />
+              합격과 취업을 실제로 만들어 낸<br />
+              전문가들이 당신의 결과를 설계합니다.
             </motion.p>
             <motion.div variants={fadeIn} className="flex flex-col sm:flex-row gap-4">
               <a 
@@ -397,7 +399,7 @@ export default function App() {
               <div className="w-14 h-14 bg-emerald-50 rounded-2xl flex items-center justify-center mb-8">
                 <Stethoscope className="text-emerald-600 w-8 h-8" />
               </div>
-              <h3 className="text-2xl font-bold mb-6">해당 학과 입시 / 취업 / 의료계 진료 분야</h3>
+              <h3 className="text-2xl font-bold mb-6">의료 관련 학과 입시 / 취업 / 의료계 진료 분야</h3>
               <ul className="space-y-4 text-slate-600">
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="text-emerald-600 w-5 h-5 mt-1 shrink-0" />
@@ -438,7 +440,7 @@ export default function App() {
                   </div>
                   <div>
                     <h4 className="text-emerald-400 font-bold mb-4 flex items-center gap-2">
-                      <Users className="w-5 h-5" /> 의료계 취업
+                      <Users className="w-5 h-5" /> 의료 관련 학과 입시 / 취업
                     </h4>
                     <ul className="grid sm:grid-cols-2 gap-4 text-slate-300 text-sm">
                       <li>• 치대, 간호학과 진학 및 취업 준비</li>
@@ -678,7 +680,7 @@ export default function App() {
             현직 전문가와 함께하면 결과가 달라집니다.
           </h2>
           <p className="text-blue-100 text-lg mb-12 max-w-2xl mx-auto">
-            지금 바로 1:1 맞춤 상담을 신청하고 당신만의 합격 로드맵을 설계받으세요.
+            지금 바로 1:1 맞춤 상담을 신청하고 당신만의 합격 로드맵을 설계 받으세요.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a 
