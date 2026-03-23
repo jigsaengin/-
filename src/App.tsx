@@ -19,7 +19,7 @@ import {
   Search,
   MessageSquare
 } from "lucide-react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -131,6 +131,28 @@ export default function App() {
         )}
       </nav>
 
+      {/* Main Logo Hero Section */}
+      <section className="pt-32 pb-10 bg-white overflow-hidden">
+        <div className="max-w-5xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            className="relative group"
+          >
+            <div className="absolute inset-0 bg-blue-600/5 blur-[100px] rounded-full -z-10" />
+            <div className="bg-white p-4 md:p-8 rounded-[40px] shadow-[0_32px_64px_-12px_rgba(0,0,0,0.08)] border border-slate-100 transition-transform hover:scale-[1.01] duration-700">
+              <img 
+                src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=1024&auto=format&fit=crop" 
+                alt="현직메디 메인 로고" 
+                className="w-full h-auto rounded-[32px] object-contain brightness-110 contrast-105 saturate-105"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Introduction Section */}
       <section id="intro" className="pt-40 pb-20 bg-slate-50 overflow-hidden">
         <div className="max-w-5xl mx-auto px-6">
@@ -160,37 +182,42 @@ export default function App() {
               <div className="absolute top-0 right-0 w-64 h-64 bg-blue-50 rounded-full -mr-32 -mt-32 blur-3xl opacity-50" />
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-50 rounded-full -ml-32 -mb-32 blur-3xl opacity-50" />
               
-              <div className="relative z-10 space-y-12 text-center">
-                <p className="text-2xl md:text-3xl font-bold text-slate-800 leading-snug">
-                  <span className="inline-block mb-4 border-b-4 border-blue-600 pb-1 text-slate-900">현직메디는</span><br />
+              <div className="relative z-10 space-y-24 text-center">
+                <p className="text-2xl md:text-4xl font-bold text-slate-800 leading-[1.6]">
+                  <span className="inline-block mb-8 border-b-4 border-blue-600 pb-2 text-slate-900">현직메디는</span><br />
                   <span className="text-red-600">의학적 전문성</span>과<br />
                   <span className="text-red-600">입시 이해도</span>를<br />
-                  <span className="block py-6">모두 갖춘</span>
+                  <span className="block py-10 text-slate-400 font-medium">모두 갖춘</span>
                   <span className="text-blue-600">전국 최고 수준</span>의<br />
                   <span className="text-blue-600">메디컬 컨설팅 그룹</span>입니다.
                 </p>
 
-                <p className="text-lg md:text-xl text-slate-600 leading-[2] max-w-3xl mx-auto">
+                <p className="text-lg md:text-2xl text-slate-600 leading-[2.2] max-w-4xl mx-auto">
                   지원자들의 합격을 위해<br />
-                  <ExpertTag>현직 치과의사</ExpertTag> <ExpertTag>의대 재학생들</ExpertTag> <ExpertTag>현직 의대 입학사정관</ExpertTag> <ExpertTag>현직 Big5 및 고려대 병원 간호사</ExpertTag> 등<br />
-                  <span className="font-bold text-slate-900 underline decoration-blue-500 decoration-4 underline-offset-4">전국 최고 수준의 컨설턴트</span>만 고집합니다.
+                  <div className="flex flex-wrap justify-center gap-3 my-8">
+                    <ExpertTag>현직 치과의사</ExpertTag> 
+                    <ExpertTag>의대 재학생들</ExpertTag> 
+                    <ExpertTag>현직 의대 입학사정관</ExpertTag> 
+                    <ExpertTag>현직 Big5 및 고려대 병원 간호사</ExpertTag>
+                  </div>
+                  <span className="font-bold text-slate-900 underline decoration-blue-500 decoration-4 underline-offset-8">전국 최고 수준의 컨설턴트</span>만 고집합니다.
                 </p>
 
-                <div className="grid md:grid-cols-2 gap-0 border border-slate-100 rounded-3xl overflow-hidden">
-                  <div className="p-8 bg-slate-50/50 border-b md:border-b-0 md:border-r border-slate-100">
-                    <p className="text-slate-400 text-sm mb-2">정보는 누구나 줄 수 있습니다.</p>
-                    <p className="text-xl font-black text-slate-900">결과는 아무나 만들 수 없습니다.</p>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div className="p-10 bg-slate-50 rounded-[32px] border border-slate-100 shadow-sm transition-transform hover:scale-[1.02]">
+                    <p className="text-slate-400 text-sm mb-4">정보는 누구나 줄 수 있습니다.</p>
+                    <p className="text-2xl font-black text-slate-900">결과는 아무나 만들 수 없습니다.</p>
                   </div>
-                  <div className="p-8 bg-blue-600">
-                    <p className="text-blue-200 text-sm mb-2">현직메디는 ‘정보’만 제공하지 않습니다.</p>
-                    <p className="text-xl font-black text-white">결과를 설계하고, 실제로 만들어냅니다.</p>
+                  <div className="p-10 bg-blue-600 rounded-[32px] shadow-xl shadow-blue-600/20 transition-transform hover:scale-[1.02]">
+                    <p className="text-blue-200 text-sm mb-4">현직메디는 ‘정보’만 제공하지 않습니다.</p>
+                    <p className="text-2xl font-black text-white">결과를 설계하고, 실제로 만들어냅니다.</p>
                   </div>
                 </div>
 
-                <div className="pt-8">
-                  <p className="text-xl md:text-2xl font-medium text-slate-700 italic">
+                <div className="pt-12">
+                  <p className="text-2xl md:text-3xl font-medium text-slate-700 italic leading-relaxed">
                     "혼자 준비하는 순간, 방향은 흔들립니다."<br />
-                    <span className="text-blue-600 font-bold not-italic">"현직 전문가와 함께하면 결과는 달라집니다."</span>
+                    <span className="text-blue-600 font-bold not-italic block mt-4">"현직 전문가와 함께하면 결과는 달라집니다."</span>
                   </p>
                 </div>
               </div>
@@ -232,7 +259,7 @@ export default function App() {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
               <a 
-                href="https://open.kakao.com/o/sfQopLmi"
+                href="https://pf.kakao.com/_sxbYxhX"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-blue-700 transition-all shadow-xl shadow-blue-200 flex items-center justify-center gap-2 group"
@@ -259,16 +286,25 @@ export default function App() {
               
               {/* Stat Badge */}
               <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.4, duration: 0.6 }}
-                className="absolute top-6 right-6 bg-white/90 backdrop-blur-md px-6 py-4 rounded-3xl shadow-xl border border-white/20"
+                transition={{ delay: 0.4, duration: 0.8, type: "spring" }}
+                className="absolute top-6 right-6 bg-blue-600 px-8 py-6 rounded-[32px] shadow-[0_20px_40px_rgba(37,99,235,0.3)] border border-blue-400/30 z-20"
               >
-                <p className="text-slate-600 text-xs font-bold mb-1">현직메디를 통한 총 합격자 수</p>
-                <div className="flex items-baseline gap-1">
-                  <span className="text-3xl font-black text-blue-600">181</span>
-                  <span className="text-lg font-bold text-slate-900">명</span>
+                <div className="absolute -inset-1 bg-white/20 blur-sm rounded-[32px] animate-pulse" />
+                <div className="relative">
+                  <p className="text-blue-100 text-sm font-bold mb-2 text-center">현직메디를 통한 총 합격자 수</p>
+                  <div className="flex items-baseline justify-center gap-2">
+                    <motion.span 
+                      animate={{ scale: [1, 1.1, 1] }}
+                      transition={{ duration: 2, repeat: Infinity }}
+                      className="text-5xl font-black text-white"
+                    >
+                      181
+                    </motion.span>
+                    <span className="text-2xl font-bold text-blue-100">명</span>
+                  </div>
                 </div>
               </motion.div>
 
@@ -297,18 +333,30 @@ export default function App() {
         </div>
       </section>
 
-      {/* Intro Section */}
-      <section id="intro" className="py-24 bg-slate-50">
+      {/* Intro Section - Detailed */}
+      <section id="intro-details" className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-20">
+          <motion.div 
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-20"
+          >
             <h2 className="text-3xl md:text-5xl font-bold mb-6">현직메디 컨설팅</h2>
             <p className="text-slate-600 max-w-2xl mx-auto text-lg">
               의학적 전문성과 입시 이해도를 모두 갖춘 전국 최고 수준의 프리미엄 메디컬 컨설팅 그룹입니다.
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-20">
-            <div className="bg-white p-10 rounded-[32px] shadow-sm border border-slate-100">
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-white p-10 rounded-[32px] shadow-sm border border-slate-100"
+            >
               <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-8">
                 <GraduationCap className="text-blue-600 w-8 h-8" />
               </div>
@@ -326,9 +374,15 @@ export default function App() {
                   → 합격자의 ‘전략’ + 평가자 ‘기준’으로 함께 만드는 입시 전략
                 </li>
               </ul>
-            </div>
+            </motion.div>
 
-            <div className="bg-white p-10 rounded-[32px] shadow-sm border border-slate-100">
+            <motion.div 
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="bg-white p-10 rounded-[32px] shadow-sm border border-slate-100"
+            >
               <div className="w-14 h-14 bg-emerald-50 rounded-2xl flex items-center justify-center mb-8">
                 <Stethoscope className="text-emerald-600 w-8 h-8" />
               </div>
@@ -346,10 +400,16 @@ export default function App() {
                   → 대형병원·대학병원·전문성을 모두 갖춘 멘토진
                 </li>
               </ul>
-            </div>
+            </motion.div>
           </div>
 
-          <div className="bg-slate-900 text-white rounded-[40px] p-10 md:p-16 relative overflow-hidden">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="bg-slate-900 text-white rounded-[40px] p-10 md:p-16 relative overflow-hidden"
+          >
             <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h3 className="text-3xl font-bold mb-8">이런 분께 추천합니다</h3>
@@ -400,24 +460,34 @@ export default function App() {
               </div>
             </div>
             <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/20 rounded-full blur-3xl -z-0" />
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Services Grid */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-20">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-20"
+          >
             <h2 className="text-3xl md:text-5xl font-bold mb-6">전문 컨설팅 서비스</h2>
             <p className="text-slate-600 max-w-2xl mx-auto text-lg">
               각 분야의 현직 전문가들이 합격의 문을 열어드립니다.
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid md:grid-cols-2 gap-12">
             {/* 1. 학습 컨설팅 */}
             <motion.div 
               id="learning"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               whileHover={{ y: -10 }}
               className="group bg-white p-10 rounded-[40px] border border-slate-100 shadow-xl shadow-slate-100/50"
             >
@@ -457,6 +527,10 @@ export default function App() {
             {/* 2. 생기부 관리 */}
             <motion.div 
               id="record"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
               whileHover={{ y: -10 }}
               className="group bg-white p-10 rounded-[40px] border border-slate-100 shadow-xl shadow-slate-100/50"
             >
@@ -496,6 +570,10 @@ export default function App() {
             {/* 3. 원서 지원 */}
             <motion.div 
               id="application"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               whileHover={{ y: -10 }}
               className="group bg-white p-10 rounded-[40px] border border-slate-100 shadow-xl shadow-slate-100/50"
             >
@@ -538,6 +616,10 @@ export default function App() {
             {/* 4. 면접 컨설팅 */}
             <motion.div 
               id="interview"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
               whileHover={{ y: -10 }}
               className="group bg-white p-10 rounded-[40px] border border-slate-100 shadow-xl shadow-slate-100/50"
             >
@@ -597,7 +679,7 @@ export default function App() {
               <span className="text-amber-500">선생님들</span> 이력 확인하기
             </a>
             <a 
-              href="https://open.kakao.com/o/sfQopLmi"
+              href="https://pf.kakao.com/_sxbYxhX"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-blue-600 px-10 py-5 rounded-2xl font-bold text-xl hover:bg-blue-50 transition-all shadow-2xl inline-block text-center"
@@ -643,7 +725,7 @@ export default function App() {
                   <span className="text-xs font-bold">Insta</span>
                 </a>
                 <a 
-                  href="https://open.kakao.com/o/sfQopLmi" 
+                  href="https://pf.kakao.com/_sxbYxhX" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors cursor-pointer"
