@@ -194,16 +194,16 @@ export default function App() {
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-50 rounded-full -ml-32 -mb-32 blur-3xl opacity-50" />
               
               <div className="relative z-10 space-y-24 text-center">
-                <p className="text-2xl md:text-4xl font-bold text-slate-800 leading-[1.6]">
+                <div className="text-2xl md:text-4xl font-bold text-slate-800 leading-[1.6]">
                   <span className="inline-block mb-8 border-b-4 border-blue-600 pb-2 text-slate-900">현직메디는</span><br />
                   <span className="text-red-600">의학적 전문성</span>과<br />
                   <span className="text-red-600">입시 이해도</span>를<br />
                   <span className="block py-10 text-slate-400 font-medium">모두 갖춘</span>
                   <span className="text-blue-600">전국 최고 수준</span>의<br />
                   <span className="text-blue-600">메디컬 컨설팅 그룹</span>입니다.
-                </p>
+                </div>
 
-                <p className="text-lg md:text-2xl text-slate-600 leading-[2.2] max-w-4xl mx-auto">
+                <div className="text-lg md:text-2xl text-slate-600 leading-[2.2] max-w-4xl mx-auto">
                   지원자들의 합격을 위해<br />
                   <div className="flex flex-wrap justify-center gap-3 my-8">
                     <ExpertTag>현직 치과의사</ExpertTag> 
@@ -212,7 +212,7 @@ export default function App() {
                     <ExpertTag>현직 Big5 및 고려대 병원 간호사</ExpertTag>
                   </div>
                   <span className="font-bold text-slate-900 underline decoration-blue-500 decoration-4 underline-offset-8">전국 최고 수준의 컨설턴트</span>만 고집합니다.
-                </p>
+                </div>
 
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="p-10 bg-slate-50 rounded-[32px] border border-slate-100 shadow-sm transition-transform hover:scale-[1.02]">
@@ -226,10 +226,10 @@ export default function App() {
                 </div>
 
                 <div className="pt-12">
-                  <p className="text-2xl md:text-3xl font-medium text-slate-700 italic leading-relaxed">
+                  <div className="text-2xl md:text-3xl font-medium text-slate-700 italic leading-relaxed">
                     "혼자 준비하는 순간, 방향은 흔들립니다."<br />
                     <span className="text-blue-600 font-bold not-italic block mt-4">"현직 전문가와 함께하면 결과는 달라집니다."</span>
-                  </p>
+                  </div>
                 </div>
               </div>
             </div>
