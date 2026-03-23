@@ -48,6 +48,10 @@ const ExpertTag = ({ children }: { children: React.ReactNode }) => (
 );
 
 export default function App() {
+  useEffect(() => {
+    document.title = "현직메디 | 현직 의료인, 의대생의 1:1 입시 / 취업 컨설팅";
+  }, []);
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
