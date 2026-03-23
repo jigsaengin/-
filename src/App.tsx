@@ -94,9 +94,14 @@ export default function App() {
                 {item.name}
               </a>
             ))}
-            <button className="bg-slate-900 text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-blue-600 transition-all shadow-md hover:shadow-lg active:scale-95">
+            <a 
+              href="http://pf.kakao.com/_sxbYxhX" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-slate-900 text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-blue-600 transition-all shadow-md hover:shadow-lg active:scale-95 text-center"
+            >
               상담 신청하기
-            </button>
+            </a>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -123,9 +128,15 @@ export default function App() {
                   {item.name}
                 </a>
               ))}
-              <button className="w-full bg-blue-600 text-white py-4 rounded-xl font-bold mt-2">
+              <a 
+                href="http://pf.kakao.com/_sxbYxhX" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-full bg-blue-600 text-white py-4 rounded-xl font-bold mt-2 text-center"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 상담 신청하기
-              </button>
+              </a>
             </div>
           </motion.div>
         )}
